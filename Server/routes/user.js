@@ -1,0 +1,10 @@
+const { signUp, signIn, signOut, updatedUser,me } = require("../controllers/user");
+const auth= require('../middleware/auth');
+const express = require("express");
+const router = express.Router();
+router.post("/sign-in", signIn);
+router.post("/sign-up", signUp);
+router.post("/log-out", auth, signOut);
+router.patch("/update-user/:userId",auth, updatedUser);
+router.get("/me", auth, me);
+module.exports = router;

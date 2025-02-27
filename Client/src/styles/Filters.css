@@ -1,0 +1,52 @@
+/* Search Bar Styles */
+.search-container {
+    display: flex;
+    gap:1rem; /* Add margin for spacing */
+    margin: 1.5rem 0;
+  }
+  .search-container button{
+    width: auto;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .search-container input {
+    width: 30%; /* Adjust width as needed */
+    padding: 0.75rem; /* Adjust padding for a smaller input */
+    border: 1px solid #e5e7ab;
+    border-radius: 4px;
+    font-size: 1rem; /* Smaller font size */
+    background-color: white;
+  }
+  
+  .no-expenses-message {
+    text-align: center;
+    font-size: 1rem;
+    color: #6b7280; /* Tailwind's gray-500 or a similar color */
+    margin-top: 2rem;
+  }
+  .selected-filter{
+    background-color: #f0f0f0;
+    padding:5px;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+    align-items: center;
+  }
+  .selected-filter .filter-label{
+    color: #333;
+    text-decoration: none;
+    cursor: auto;
+  }
+  .close-filter-icon{
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+    margin-bottom: -3px;
+  }
+  
+  
+  
