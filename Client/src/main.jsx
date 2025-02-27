@@ -24,7 +24,8 @@ createRoot(document.getElementById('root')).render(
           pauseOnHover
           theme="dark"
         />
-        {console.log(process.env.NODE_ENV)}
+        {console.log("is in prod: ",process.env.NODE_ENV)}
+        {console.log("server link: ",baseURL = process.env.NODE_ENV === 'production' ? 'https://oyveypay.onrender.com/api' : 'http://localhost:1312/api')}
       </AuthProvider>
     </BrowserRouter>
   
