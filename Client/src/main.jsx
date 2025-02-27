@@ -24,6 +24,7 @@ createRoot(document.getElementById('root')).render(
           pauseOnHover
           theme="dark"
         />
+        {console.log(process.env.NODE_ENV)}
       </AuthProvider>
     </BrowserRouter>
   
