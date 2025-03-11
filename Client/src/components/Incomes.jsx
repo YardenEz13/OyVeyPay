@@ -180,6 +180,7 @@ export const Incomes = () => {
         maxAmount={maxAmount}
       />
       {filteredIncomes.length > 0 ? (
+        <div className='table-container'>
         <table className='expenses-table'>
           <thead>
             <tr>
@@ -225,6 +226,7 @@ export const Incomes = () => {
             )}
           </tbody>
         </table>
+        </div>
       ) : inputSearch ? (
         <div className='no-incomes-message'>
           No matching incomes found for "{inputSearch}".
