@@ -3,6 +3,7 @@ const routes= require('./routes');
 const connectDB = require('./lib/connect');
 const cookieParser= require('cookie-parser');
 const cors = require('cors');
+const path = require('path');
 
 
 const app = express();
@@ -10,13 +11,16 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-    origin: ['http://localhost:5173'],
+    origin: ['http://localhost:5173', 'https://oyveypay.onrender.com'],
     credentials: true,
     
 }));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api',routes);
-
-console.log(process.env.DATABASE_URL)
+  
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 app.listen(1312, () => {
     connectDB();
