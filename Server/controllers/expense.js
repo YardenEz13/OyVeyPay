@@ -174,7 +174,7 @@ const updateExpense= async(req,res)=>{
 
             expenses.forEach(expense=>{
                 totalAmount+= expense.exchangedAmount;
-                
+                console.log(totalAmount);
             
             
             });
